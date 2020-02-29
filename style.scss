@@ -1,0 +1,174 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+@mixin after-color-bg($bg-color) {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    transform: translateY(-1em);
+    height: 75vh;
+    width: 100vw;
+    background-color: $bg-color;
+  }
+}
+
+@mixin card-icon($url) {
+  &::before {
+    background-image: url($url);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Caveat|Comfortaa|Fredoka+One&display=swap');
+
+$card-bg-color: white;
+
+$section-1-bg-color: #fff18f;
+$section-2-bg-color: #c5ff8f;
+$section-3-bg-color: #8fffdd;
+$section-4-bg-color: #8fc0ff;
+$section-5-bg-color: #a48fff;
+$section-6-bg-color: #ff8fff;
+
+
+/* General Styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+  // line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+* {
+  box-sizing: border-box;
+  // position: relative;
+  z-index: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+
+/* Styling Specifics */
+
+
+// section-1
+.intro {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    height: 80vh;
+    width: 100%;
+    background-color: $section-1-bg-color;
+  }
+}
+
+header {
+  margin: 1em;
+  color: rgb(54, 54, 54);
+}
+
+.summary {
+  margin: 1em;
+  font-size: 80%;
+}
+
+// cards
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements
+{
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  max-width: 20em;
+  background-color: $card-bg-color;
+  height: auto;
+  // backdrop-filter: blur(5px);  
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  //icon
+  &::before {
+    content: '';
+    margin: auto;
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-size: 100px 100px;
+  }
+
+}
+
+footer {
+  margin: 1em;
+}
+
+.sidebar {
+  margin: 1em;
+}
+
+
+
+/* ADDITIONAL STYLINGS */
+.intro {
+  @include after-color-bg($section-2-bg-color);
+}
+
+.preamble {
+  &:hover::before {
+    filter: brightness(1.1);
+  }
+  @include card-icon('./assets/lightbulb2.svg');
+
+  @include after-color-bg($section-2-bg-color);
+}
+
+.explanation {
+  @include after-color-bg($section-3-bg-color);
+}
+.participation {
+  @include after-color-bg($section-4-bg-color);
+}
+.benefits {
+  @include after-color-bg($section-5-bg-color);
+}
+.requirements {
+  
+}
+footer {
+
+}
