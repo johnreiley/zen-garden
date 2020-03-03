@@ -171,6 +171,7 @@ footer {
   @include after-color-bg($section-4-bg-color);
 }
 .requirements {
+  @include card-icon('./assets/checkbox.svg');
   @include after-color-bg($section-5-bg-color);
   
 }

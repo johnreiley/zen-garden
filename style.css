@@ -168,6 +168,10 @@ footer {
   background-color: #8fc0ff;
 }
 
+.requirements::before {
+  background-image: url("./assets/checkbox.svg");
+}
+
 .requirements::after {
   content: '';
   display: block;
