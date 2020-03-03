@@ -128,7 +128,7 @@ footer {
   background-image: url("./assets/lightbulb2.svg");
 }
 
-.preamble::after {
+.explanation::after {
   content: '';
   display: block;
   position: absolute;
@@ -140,7 +140,7 @@ footer {
   background-color: #c5ff8f;
 }
 
-.explanation::after {
+.participation::after {
   content: '';
   display: block;
   position: absolute;
@@ -152,7 +152,7 @@ footer {
   background-color: #8fffdd;
 }
 
-.participation::after {
+.benefits::after {
   content: '';
   display: block;
   position: absolute;
@@ -164,18 +164,6 @@ footer {
   background-color: #8fc0ff;
 }
 
-.benefits::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: -3;
-  left: -1em;
-  top: -3em;
-  height: 50%;
-  width: 100vw;
-  background-color: #a48fff;
-}
-
 .requirements::after {
   content: '';
   display: block;
@@ -185,6 +173,6 @@ footer {
   top: -3em;
   height: 50%;
   width: 100vw;
-  background-color: #ff8fff;
+  background-color: #a48fff;
 }
 /*# sourceMappingURL=style.css.map */

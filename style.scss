@@ -158,21 +158,19 @@ footer {
     filter: brightness(1.1);
   }
   @include card-icon('./assets/lightbulb2.svg');
-
-  @include after-color-bg($section-2-bg-color);
 }
 
 .explanation {
-  @include after-color-bg($section-3-bg-color);
+  @include after-color-bg($section-2-bg-color);
 }
 .participation {
-  @include after-color-bg($section-4-bg-color);
+  @include after-color-bg($section-3-bg-color);
 }
 .benefits {
-  @include after-color-bg($section-5-bg-color);
+  @include after-color-bg($section-4-bg-color);
 }
 .requirements {
-  @include after-color-bg($section-6-bg-color);
+  @include after-color-bg($section-5-bg-color);
   
 }
 footer {
