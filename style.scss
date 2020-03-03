@@ -164,6 +164,7 @@ footer {
   @include after-color-bg($section-2-bg-color);
 }
 .participation {
+  @include card-icon('./assets/hands.svg');
   @include after-color-bg($section-3-bg-color);
 }
 .benefits {

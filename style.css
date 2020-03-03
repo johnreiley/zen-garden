@@ -140,6 +140,10 @@ footer {
   background-color: #c5ff8f;
 }
 
+.participation::before {
+  background-image: url("./assets/hands.svg");
+}
+
 .participation::after {
   content: '';
   display: block;
