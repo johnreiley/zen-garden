@@ -11,13 +11,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  color: #363636;
+  overflow-x: hidden;
   font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 0;
 }
 
 h1,
@@ -68,6 +69,7 @@ header {
   max-width: 20em;
   background-color: white;
   height: auto;
+  position: relative;
 }
 
 .preamble h1, .preamble h2, .preamble h3,
@@ -117,19 +119,6 @@ footer {
 }
 
 /* ADDITIONAL STYLINGS */
-.intro::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: -2;
-  left: 0;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-  height: 75vh;
-  width: 100vw;
-  background-color: #c5ff8f;
-}
-
 .preamble:hover::before {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
@@ -143,11 +132,10 @@ footer {
   content: '';
   display: block;
   position: absolute;
-  z-index: -2;
-  left: 0;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-  height: 75vh;
+  z-index: -3;
+  left: -1em;
+  top: -3em;
+  height: 50%;
   width: 100vw;
   background-color: #c5ff8f;
 }
@@ -156,11 +144,10 @@ footer {
   content: '';
   display: block;
   position: absolute;
-  z-index: -2;
-  left: 0;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-  height: 75vh;
+  z-index: -3;
+  left: -1em;
+  top: -3em;
+  height: 50%;
   width: 100vw;
   background-color: #8fffdd;
 }
@@ -169,11 +156,10 @@ footer {
   content: '';
   display: block;
   position: absolute;
-  z-index: -2;
-  left: 0;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-  height: 75vh;
+  z-index: -3;
+  left: -1em;
+  top: -3em;
+  height: 50%;
   width: 100vw;
   background-color: #8fc0ff;
 }
@@ -182,12 +168,23 @@ footer {
   content: '';
   display: block;
   position: absolute;
-  z-index: -2;
-  left: 0;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-  height: 75vh;
+  z-index: -3;
+  left: -1em;
+  top: -3em;
+  height: 50%;
   width: 100vw;
   background-color: #a48fff;
+}
+
+.requirements::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -3;
+  left: -1em;
+  top: -3em;
+  height: 50%;
+  width: 100vw;
+  background-color: #ff8fff;
 }
 /*# sourceMappingURL=style.css.map */
