@@ -16,7 +16,7 @@ body {
   font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
 
-* {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -135,7 +135,7 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
   background-color: #c5ff8f;
 }
@@ -151,7 +151,7 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
   background-color: #8fffdd;
 }
@@ -163,7 +163,7 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
   background-color: #8fc0ff;
 }
@@ -179,7 +179,7 @@ footer {
   z-index: -3;
   left: -1em;
   top: -3em;
-  height: 50%;
+  height: 75%;
   width: 100vw;
   background-color: #a48fff;
 }
