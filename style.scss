@@ -168,7 +168,7 @@ footer {
   @include after-color-bg($section-3-bg-color);
 
   &:hover::before{
-    animation: bounce 1s infinite;
+    animation: bounce 1s;
   }
 }
 .benefits {
@@ -186,6 +186,8 @@ footer {
   0% {transform: translateY(0);}
   17% {transform: translateY(-20px);}
   33% {transform: translateY(0);} 
+  49% {transform: translateY(-10px);}
   66% {transform: translateY(0);} 
+  83% {transform: translateY(-5px);}
   100% {transform: translateY(0);} 
 }
