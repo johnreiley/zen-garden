@@ -156,6 +156,11 @@ footer {
   background-color: #8fffdd;
 }
 
+.participation:hover::before {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+
 .benefits::after {
   content: '';
   display: block;
@@ -168,10 +173,6 @@ footer {
   background-color: #8fc0ff;
 }
 
-.requirements::before {
-  background-image: url("./assets/checkbox.svg");
-}
-
 .requirements::after {
   content: '';
   display: block;
@@ -182,5 +183,55 @@ footer {
   height: 75%;
   width: 100vw;
   background-color: #a48fff;
+}
+
+.requirements::before {
+  background-image: url("./assets/checkbox.svg");
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  17% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  33% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  66% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  17% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  33% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  66% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
