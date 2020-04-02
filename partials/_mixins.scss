@@ -1,0 +1,27 @@
+@mixin after-color-bg($bg-color) {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -3;
+    top: -3em;
+    height: 75%;
+    width: 100vw;
+    background-color: $bg-color;
+
+    left: -$card-margin-sm;
+    @media screen and (min-width: 585px) {
+      left: -$card-margin-md;
+    }
+    
+    @media screen and (min-width: 850px){
+      left: -$card-margin-left-lg;
+    }
+  }
+}
+
+@mixin card-icon($url) {
+  &::before {
+    background-image: url($url);
+  }
+}

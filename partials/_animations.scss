@@ -1,0 +1,59 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  17% {
+    transform: translateY(-20px);
+  }
+
+  33% {
+    transform: translateY(0);
+  }
+
+  66% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes wave {
+  0% {}
+  10% {
+    transform: rotate(30deg);
+  }
+  30% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  70% {
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(10deg);
+  }
+  100% {}
+}
+
+@keyframes pop {
+  0% {}
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {}
+}
+
+@keyframes check {
+  0% {}
+  50% {
+    transform: perspective(800px);
+  }
+  100% {}
+}

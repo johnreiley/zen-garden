@@ -6,39 +6,12 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-@mixin after-color-bg($bg-color) {
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    // position: relative;
-    z-index: -3;
-    left: -1em;
-    top: -3em;
-    height: 75%;
-    width: 100vw;
-    background-color: $bg-color;
-  }
-}
-
-@mixin card-icon($url) {
-  &::before {
-    background-image: url($url);
-  }
-}
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/animations';
 
 @import url('https://fonts.googleapis.com/css?family=Caveat|Comfortaa|Fredoka+One&display=swap');
 
-$card-bg-color: white;
-$primary-font-color: rgb(54, 54, 54);
-
-$section-1-bg-color: #fff18f;
-$section-2-bg-color: #c5ff8f;
-$section-3-bg-color: #8fffdd;
-$section-4-bg-color: #8fc0ff;
-$section-5-bg-color: #a48fff;
-$section-6-bg-color: #ff8fff;
 
 
 /* General Styling */
@@ -94,11 +67,27 @@ h2 {
 header {
   margin: 1em;
   color: $primary-font-color;
+  @media screen and (min-width: 585px) {
+    margin: 1em $card-margin-md;
+  }
+
+  @media screen and (min-width: 850px){
+    margin: 1em $card-margin-right-lg 1em $card-margin-left-lg;
+    height: 95px;
+  }
 }
 
 .summary {
   margin: 1em;
   font-size: 80%;
+  @media screen and (min-width: 585px) {
+    margin: 1em $card-margin-md;
+  }
+
+  @media screen and (min-width: 850px){
+    margin: 1em $card-margin-right-lg 1em $card-margin-left-lg;
+    height: 90px;
+  }
 }
 
 // cards
@@ -112,7 +101,7 @@ header {
   padding: 1em;
   box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
   border-radius: 3px;
-  max-width: 20em;
+  // max-width: 600px;
   background-color: $card-bg-color;
   height: auto;
   position: relative;
@@ -136,6 +125,14 @@ header {
     background-size: 100px 100px;
   }
 
+  @media screen and (min-width: 585px) {
+    margin: 1em $card-margin-md;
+  }
+
+  @media screen and (min-width: 850px){
+    margin: 1em $card-margin-right-lg 1em $card-margin-left-lg;
+  }
+
 }
 
 footer {
@@ -144,8 +141,47 @@ footer {
 
 .sidebar {
   margin: 1em;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 10px 5px;
+      border-bottom: solid 1px lightgray;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:first-of-type {
+      color: gray;
+    }
+    a:last-of-type {
+      color: lightgray;
+    }
+  }
 }
 
+@media screen and (min-width: 585px) {
+  footer, .sidebar {
+    margin: 1em $card-margin-md;
+  }
+}
+
+@media screen and (min-width: 850px){
+  footer {
+
+  }
+  .sidebar {
+    margin: 0;
+    position: absolute;
+    top: 280px;
+    padding: 1em;
+    border-radius: 3px;
+    right: $card-margin-left-lg;
+    width: $card-margin-right-lg - 10vw;
+    background-color: white;
+    box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
+  }
+}
 
 
 /* ADDITIONAL STYLINGS */
@@ -161,7 +197,12 @@ footer {
 }
 
 .explanation {
+  @include card-icon('./assets/question_mark.svg');
   @include after-color-bg($section-2-bg-color);
+
+  &:hover::before{
+    animation: wave 2s infinite;
+  }
 }
 .participation {
   @include card-icon('./assets/hands.svg');
@@ -172,20 +213,24 @@ footer {
   }
 }
 .benefits {
+  @include card-icon('./assets/xp.svg');
   @include after-color-bg($section-4-bg-color);
+
+  &:hover::before{
+    animation: pop 2s infinite;
+  }
 }
 .requirements {
   @include after-color-bg($section-5-bg-color);
   @include card-icon('./assets/checkbox.svg');
+
+  &:hover::before{
+    animation: check 3s infinite;
+  }
 }
 footer {
-
+  &::before {
+    content: "";
+  }
 }
 
-@keyframes bounce{
-  0% {transform: translateY(0);}
-  17% {transform: translateY(-20px);}
-  33% {transform: translateY(0);} 
-  66% {transform: translateY(0);} 
-  100% {transform: translateY(0);} 
-}

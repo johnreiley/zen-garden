@@ -5,6 +5,149 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 @import url("https://fonts.googleapis.com/css?family=Caveat|Comfortaa|Fredoka+One&display=swap");
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  17% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  33% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  66% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  17% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  33% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  66% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+  }
+  10% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  70% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  90% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+  }
+}
+
+@keyframes wave {
+  0% {
+  }
+  10% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  30% {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+  }
+  50% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+  70% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  90% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes pop {
+  0% {
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+  }
+}
+
+@keyframes pop {
+  0% {
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes check {
+  0% {
+  }
+  50% {
+    -webkit-transform: perspective(800px);
+            transform: perspective(800px);
+  }
+  100% {
+  }
+}
+
+@keyframes check {
+  0% {
+  }
+  50% {
+    -webkit-transform: perspective(800px);
+            transform: perspective(800px);
+  }
+  100% {
+  }
+}
+
 /* General Styling */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -51,9 +194,35 @@ header {
   color: #363636;
 }
 
+@media screen and (min-width: 585px) {
+  header {
+    margin: 1em 20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  header {
+    margin: 1em 35vw 1em 5vw;
+    height: 95px;
+  }
+}
+
 .summary {
   margin: 1em;
   font-size: 80%;
+}
+
+@media screen and (min-width: 585px) {
+  .summary {
+    margin: 1em 20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .summary {
+    margin: 1em 35vw 1em 5vw;
+    height: 90px;
+  }
 }
 
 .preamble,
@@ -66,7 +235,6 @@ header {
   -webkit-box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
   border-radius: 3px;
-  max-width: 20em;
   background-color: white;
   height: auto;
   position: relative;
@@ -110,12 +278,75 @@ header {
   background-size: 100px 100px;
 }
 
+@media screen and (min-width: 585px) {
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    margin: 1em 20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    margin: 1em 35vw 1em 5vw;
+  }
+}
+
 footer {
   margin: 1em;
 }
 
 .sidebar {
   margin: 1em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 5px;
+  border-bottom: solid 1px lightgray;
+}
+
+.sidebar ul a {
+  text-decoration: none;
+}
+
+.sidebar ul a:first-of-type {
+  color: gray;
+}
+
+.sidebar ul a:last-of-type {
+  color: lightgray;
+}
+
+@media screen and (min-width: 585px) {
+  footer, .sidebar {
+    margin: 1em 20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .sidebar {
+    margin: 0;
+    position: absolute;
+    top: 280px;
+    padding: 1em;
+    border-radius: 3px;
+    right: 5vw;
+    width: 25vw;
+    background-color: white;
+    -webkit-box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1px 25px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 
 /* ADDITIONAL STYLINGS */
@@ -128,16 +359,37 @@ footer {
   background-image: url("./assets/lightbulb2.svg");
 }
 
+.explanation::before {
+  background-image: url("./assets/question_mark.svg");
+}
+
 .explanation::after {
   content: '';
   display: block;
   position: absolute;
   z-index: -3;
-  left: -1em;
   top: -3em;
   height: 75%;
   width: 100vw;
   background-color: #c5ff8f;
+  left: -1em;
+}
+
+@media screen and (min-width: 585px) {
+  .explanation::after {
+    left: -20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .explanation::after {
+    left: -5vw;
+  }
+}
+
+.explanation:hover::before {
+  -webkit-animation: wave 2s infinite;
+          animation: wave 2s infinite;
 }
 
 .participation::before {
@@ -149,11 +401,23 @@ footer {
   display: block;
   position: absolute;
   z-index: -3;
-  left: -1em;
   top: -3em;
   height: 75%;
   width: 100vw;
   background-color: #8fffdd;
+  left: -1em;
+}
+
+@media screen and (min-width: 585px) {
+  .participation::after {
+    left: -20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .participation::after {
+    left: -5vw;
+  }
 }
 
 .participation:hover::before {
@@ -161,16 +425,37 @@ footer {
           animation: bounce 1s infinite;
 }
 
+.benefits::before {
+  background-image: url("./assets/xp.svg");
+}
+
 .benefits::after {
   content: '';
   display: block;
   position: absolute;
   z-index: -3;
-  left: -1em;
   top: -3em;
   height: 75%;
   width: 100vw;
   background-color: #8fc0ff;
+  left: -1em;
+}
+
+@media screen and (min-width: 585px) {
+  .benefits::after {
+    left: -20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .benefits::after {
+    left: -5vw;
+  }
+}
+
+.benefits:hover::before {
+  -webkit-animation: pop 2s infinite;
+          animation: pop 2s infinite;
 }
 
 .requirements::after {
@@ -178,60 +463,35 @@ footer {
   display: block;
   position: absolute;
   z-index: -3;
-  left: -1em;
   top: -3em;
   height: 75%;
   width: 100vw;
   background-color: #a48fff;
+  left: -1em;
+}
+
+@media screen and (min-width: 585px) {
+  .requirements::after {
+    left: -20vw;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .requirements::after {
+    left: -5vw;
+  }
 }
 
 .requirements::before {
   background-image: url("./assets/checkbox.svg");
 }
 
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  17% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  33% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  66% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+.requirements:hover::before {
+  -webkit-animation: check 3s infinite;
+          animation: check 3s infinite;
 }
 
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  17% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  33% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  66% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+footer::before {
+  content: "";
 }
 /*# sourceMappingURL=style.css.map */
