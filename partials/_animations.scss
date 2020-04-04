@@ -52,8 +52,10 @@
 
 @keyframes check {
   0% {}
-  50% {
-    transform: perspective(800px);
+  25% {
+    transform: rotate(-15deg);
   }
+  50% {}
+  75% {transform: scale(1.3) rotate(15deg)}
   100% {}
 }
