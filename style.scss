@@ -297,7 +297,7 @@ footer {
   }
 
   &:hover::before{
-    animation: bounce 1s;
+    animation: bounce 1s infinite;
   }
 }
 .benefits {

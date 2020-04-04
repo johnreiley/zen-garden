@@ -550,8 +550,8 @@ footer a:nth-child(5) {
 }
 
 .participation:hover::before {
-  -webkit-animation: bounce 1s;
-          animation: bounce 1s;
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .benefits::before {
